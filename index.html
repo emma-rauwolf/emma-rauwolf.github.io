@@ -15,24 +15,22 @@
     :root {
       --bg: #f8eeef;
       --bg-soft: #fcf7f7;
-      --panel: rgba(255, 249, 250, 0.88);
-      --panel-strong: rgba(255, 249, 250, 0.96);
+      --panel: rgba(255, 249, 250, 0.9);
+      --panel-strong: rgba(255, 249, 250, 0.97);
       --text: #6f454a;
       --muted: #9b6b72;
       --accent: #a51f28;
       --line: #e6cfd3;
-      --white: #ffffff;
       --shadow: 0 18px 46px rgba(126, 69, 75, 0.08);
       --radius-xl: 34px;
       --radius-lg: 24px;
       --radius-md: 16px;
-      --max: 1380px;
-      --nav-height: 108px;
+      --max: 1360px;
+      --nav-height: 102px;
     }
 
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-
     body {
       margin: 0;
       font-family: "Helvetica Neue", Arial, sans-serif;
@@ -50,7 +48,7 @@
     .container {
       max-width: var(--max);
       margin: 0 auto;
-      padding: 0 24px 90px;
+      padding: 0 24px 84px;
     }
 
     .site-header {
@@ -58,13 +56,12 @@
       top: 0;
       z-index: 50;
       backdrop-filter: blur(14px);
-      background: rgba(248, 238, 239, 0.86);
+      background: rgba(248, 238, 239, 0.88);
       border-bottom: 1px solid rgba(230, 207, 211, 0.9);
     }
 
     .header-inner {
       max-width: 100%;
-      margin: 0 auto;
       min-height: var(--nav-height);
       padding: 22px 42px;
       display: flex;
@@ -80,7 +77,7 @@
     }
 
     .brand img {
-      height: 62px;
+      height: 50px;
       width: auto;
       display: block;
     }
@@ -102,16 +99,12 @@
       transition: opacity 0.2s ease, transform 0.2s ease;
     }
 
-    .nav a:hover {
-      opacity: 0.62;
-      transform: translateY(-1px);
-    }
+    .nav a:hover { opacity: 0.62; transform: translateY(-1px); }
 
-    .section { margin-top: 96px; }
-
+    .section { margin-top: 86px; }
     .section-label {
       display: inline-block;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
       color: var(--muted);
       text-transform: uppercase;
       letter-spacing: 0.26em;
@@ -119,9 +112,9 @@
     }
 
     .section h2 {
-      margin: 0 0 28px;
+      margin: 0 0 22px;
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 44px;
+      font-size: 40px;
       line-height: 1.05;
       font-weight: 600;
       color: var(--accent);
@@ -130,27 +123,30 @@
     .hero {
       min-height: calc(100vh - var(--nav-height));
       display: grid;
-      grid-template-columns: 1.02fr 0.98fr;
+      grid-template-columns: 1fr 1fr;
       align-items: stretch;
-      gap: 28px;
-      padding-top: 32px;
+      gap: 24px;
+      padding-top: 26px;
     }
 
     .hero-card,
     .hero-portrait,
     .about-card,
+    .about-image-card,
     .contact-card,
     .project-card,
     .project-modal-panel,
     .quote-panel,
-    .philosophy-card {
+    .philosophy-card,
+    .profile-summary,
+    .profile-detail {
       border: 1px solid var(--line);
       border-radius: var(--radius-xl);
       box-shadow: var(--shadow);
     }
 
     .hero-card {
-      padding: 48px 46px 42px;
+      padding: 40px 40px 34px;
       background: linear-gradient(135deg, var(--panel-strong) 0%, var(--bg-soft) 100%);
       display: flex;
       flex-direction: column;
@@ -164,45 +160,45 @@
     .hero-eyebrow {
       display: inline-flex;
       width: fit-content;
-      padding: 10px 18px;
-      margin-bottom: 22px;
+      padding: 9px 16px;
+      margin-bottom: 20px;
       border-radius: 999px;
       border: 1px solid var(--line);
       background: rgba(255,255,255,0.68);
       color: var(--muted);
       text-transform: uppercase;
       letter-spacing: 0.22em;
-      font-size: 11px;
+      font-size: 10px;
     }
 
     .hero-title {
       margin: 0;
-      max-width: 760px;
-      font-family: "Times New Roman", Georgia, serif;
-      font-size: clamp(32px, 4vw, 64px);
-      line-height: 1.02;
+      max-width: 690px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(28px, 3.9vw, 56px);
+      line-height: 1.03;
       letter-spacing: -0.02em;
       color: var(--accent);
       font-weight: 600;
     }
 
     .hero-text {
-      margin: 20px 0 0;
-      max-width: 620px;
-      font-size: 16px;
-      line-height: 1.75;
+      margin: 18px 0 0;
+      max-width: 590px;
+      font-size: 15px;
+      line-height: 1.72;
       color: var(--text);
     }
 
     .hero-meta {
-      margin-top: 28px;
+      margin-top: 24px;
       display: flex;
-      gap: 14px;
+      gap: 12px;
       flex-wrap: wrap;
     }
 
     .meta-pill {
-      padding: 10px 16px;
+      padding: 10px 14px;
       border-radius: 999px;
       border: 1px solid var(--line);
       background: rgba(255,255,255,0.56);
@@ -214,17 +210,17 @@
 
     .button-row {
       display: flex;
-      gap: 14px;
+      gap: 12px;
       flex-wrap: wrap;
-      margin-top: 28px;
+      margin-top: 24px;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 52px;
-      padding: 0 24px;
+      min-height: 50px;
+      padding: 0 22px;
       border-radius: 999px;
       text-transform: uppercase;
       letter-spacing: 0.18em;
@@ -235,14 +231,12 @@
     }
 
     .btn:hover { transform: translateY(-1px); opacity: 0.96; }
-
     .btn-primary {
       background: var(--accent);
       color: #fff;
       border: 1px solid var(--accent);
       box-shadow: 0 14px 28px rgba(165, 31, 40, 0.16);
     }
-
     .btn-secondary {
       background: transparent;
       color: var(--accent);
@@ -252,7 +246,7 @@
     .hero-portrait {
       position: relative;
       overflow: hidden;
-      min-height: 620px;
+      min-height: 560px;
       background: #fdf8f8;
       opacity: 0;
       transform: translateY(18px);
@@ -264,7 +258,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(111,69,74,0.08));
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(111,69,74,0.08));
       z-index: 1;
       pointer-events: none;
     }
@@ -273,36 +267,38 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center 34%;
-      transform: scale(1.02);
+      object-position: center 36%;
+      transform: scale(1.01);
       transition: transform 1.8s ease;
       filter: grayscale(100%) contrast(1.04) brightness(1.02);
     }
 
-    .hero:hover .hero-portrait img { transform: scale(1.05); }
+    .hero:hover .hero-portrait img { transform: scale(1.04); }
 
     .intro-grid {
-      margin-top: 28px;
+      margin-top: 24px;
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 22px;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 20px;
       align-items: stretch;
     }
 
     .philosophy-card,
     .quote-panel {
       background: rgba(255, 250, 251, 0.9);
-      padding: 28px 26px;
+      padding: 26px 24px;
     }
 
     .philosophy-card h3,
     .quote-panel h3,
     .about-card h3,
     .contact-card h3,
-    .project-modal-meta h3 {
-      margin: 0 0 16px;
+    .project-modal-meta h3,
+    .profile-summary h3,
+    .profile-detail h3 {
+      margin: 0 0 14px;
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 28px;
+      font-size: 26px;
       color: var(--accent);
       font-weight: 600;
     }
@@ -310,7 +306,8 @@
     .philosophy-card p,
     .quote-panel p,
     .about-card p,
-    .contact-card p {
+    .contact-card p,
+    .profile-detail p {
       margin: 0;
       font-size: 16px;
       line-height: 1.72;
@@ -341,7 +338,7 @@
     .project-card {
       position: relative;
       overflow: hidden;
-      min-height: 320px;
+      min-height: 290px;
       background: #f7efef;
       cursor: pointer;
       transition: transform 0.28s ease, box-shadow 0.28s ease;
@@ -373,7 +370,7 @@
       background: linear-gradient(180deg, rgba(255,255,255,0.02) 18%, rgba(65,25,29,0.56) 100%);
       display: flex;
       align-items: flex-end;
-      padding: 24px;
+      padding: 22px;
     }
 
     .project-overlay-inner {
@@ -398,7 +395,7 @@
 
     .project-name {
       font-family: Georgia, serif;
-      font-size: 26px;
+      font-size: 24px;
       line-height: 1.08;
       margin-bottom: 8px;
     }
@@ -412,43 +409,110 @@
 
     .about-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 0.95fr 1.05fr;
       gap: 22px;
+      align-items: stretch;
     }
 
-    .about-card,
+    .about-image-card,
+    .profile-summary,
+    .profile-detail,
     .contact-card {
       background: rgba(255, 249, 250, 0.92);
-      padding: 30px 26px;
+      padding: 28px 24px;
     }
 
     .about-image-card {
       padding: 0;
       overflow: hidden;
+      min-height: 620px;
     }
 
     .about-image-card img {
       width: 100%;
       height: 100%;
-      min-height: 100%;
       object-fit: cover;
-      object-position: center;
+      object-position: center 34%;
       filter: grayscale(100%) contrast(1.04) brightness(1.02);
     }
 
-    .about-list {
+    .about-content {
       display: grid;
-      gap: 10px;
-      margin-top: 18px;
+      gap: 18px;
     }
 
-    .about-item {
-      padding: 14px 16px;
+    .profile-summary {
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .profile-summary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 56px rgba(126, 69, 75, 0.12);
+    }
+
+    .profile-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .profile-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 14px;
       border: 1px solid var(--line);
       border-radius: 16px;
-      background: rgba(255,255,255,0.58);
+      background: rgba(255,255,255,0.62);
+    }
+
+    .profile-icon {
+      width: 36px;
+      height: 36px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.74);
+      color: var(--accent);
+      font-size: 16px;
+    }
+
+    .profile-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+      margin-bottom: 5px;
+    }
+
+    .profile-value {
       font-size: 14px;
-      line-height: 1.5;
+      line-height: 1.45;
+      color: var(--text);
+    }
+
+    .profile-tip {
+      margin-top: 16px;
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+    }
+
+    .profile-detail {
+      display: none;
+    }
+
+    .profile-detail.open {
+      display: block;
+      animation: fadeUp 0.45s ease forwards;
+    }
+
+    .profile-detail p + p {
+      margin-top: 14px;
     }
 
     .contact-links {
@@ -608,7 +672,7 @@
       }
 
       .hero-portrait {
-        min-height: 500px;
+        min-height: 480px;
         order: -1;
       }
 
@@ -618,28 +682,21 @@
         grid-column: span 12;
       }
 
-      .nav {
-        gap: 18px;
-      }
-
       .header-inner {
         align-items: flex-start;
         flex-direction: column;
       }
+
+      .nav { gap: 18px; }
+      .about-image-card { min-height: 420px; }
     }
 
     @media (max-width: 640px) {
-      :root { --nav-height: 96px; }
+      :root { --nav-height: 94px; }
 
       .container { padding: 0 14px 56px; }
-
-      .header-inner {
-        padding: 16px 14px;
-      }
-
-      .brand img {
-        height: 48px;
-      }
+      .header-inner { padding: 16px 14px; }
+      .brand img { height: 42px; }
 
       .nav {
         width: 100%;
@@ -657,113 +714,105 @@
       }
 
       .hero-card {
-        padding: 26px 20px;
+        padding: 24px 18px;
         border-radius: 24px;
       }
 
       .hero-eyebrow {
         font-size: 10px;
         padding: 8px 14px;
-        margin-bottom: 16px;
+        margin-bottom: 14px;
       }
 
       .hero-title {
-        font-size: 28px;
-        line-height: 1.06;
+        font-size: 26px;
+        line-height: 1.04;
       }
 
       .hero-text {
-        font-size: 15px;
-        line-height: 1.64;
-        margin-top: 16px;
+        font-size: 14px;
+        line-height: 1.62;
+        margin-top: 14px;
       }
 
       .hero-meta {
-        margin-top: 22px;
-        gap: 10px;
+        margin-top: 18px;
+        gap: 8px;
       }
 
       .meta-pill {
         font-size: 10px;
-        padding: 9px 12px;
+        padding: 8px 11px;
       }
 
       .button-row {
-        margin-top: 22px;
-        gap: 12px;
+        margin-top: 18px;
+        gap: 10px;
         flex-direction: column;
       }
 
       .btn {
         width: 100%;
-        min-height: 48px;
+        min-height: 46px;
       }
 
       .hero-portrait {
-        min-height: 340px;
+        min-height: 310px;
         border-radius: 24px;
         order: -1;
       }
 
       .section {
-        margin-top: 58px;
+        margin-top: 54px;
       }
 
       .section h2 {
-        font-size: 32px;
-        margin-bottom: 18px;
+        font-size: 30px;
+        margin-bottom: 16px;
       }
 
       .philosophy-card,
       .quote-panel,
-      .about-card,
+      .profile-summary,
+      .profile-detail,
       .contact-card,
       .project-modal-panel {
-        padding: 22px 18px;
+        padding: 20px 16px;
         border-radius: 22px;
       }
 
       .about-image-card {
+        min-height: 320px;
         padding: 0;
       }
 
       .philosophy-card h3,
       .quote-panel h3,
-      .about-card h3,
+      .profile-summary h3,
+      .profile-detail h3,
       .contact-card h3,
       .project-modal-meta h3 {
-        font-size: 23px;
-      }
-
-      .projects-grid {
-        gap: 14px;
-      }
-
-      .project-card {
-        min-height: 250px;
-      }
-
-      .project-overlay {
-        padding: 18px;
-      }
-
-      .project-name {
         font-size: 22px;
       }
 
+      .projects-grid { gap: 14px; }
+      .project-card { min-height: 240px; }
+      .project-overlay { padding: 16px; }
+      .project-name { font-size: 22px; }
       .project-caption,
       .philosophy-card p,
       .quote-panel p,
-      .about-card p,
+      .profile-detail p,
       .contact-card p,
       .project-modal-meta p {
         font-size: 15px;
       }
 
-      .project-modal {
-        padding: 14px;
+      .profile-grid {
+        grid-template-columns: 1fr;
       }
 
+      .project-modal { padding: 14px; }
       .footer {
         font-size: 11px;
         letter-spacing: 0.1em;
@@ -799,8 +848,8 @@
         <div class="hero-meta">
           <div class="meta-pill">Entwurf</div>
           <div class="meta-pill">Konzept</div>
-          <div class="meta-pill">Atmosphäre</div>
-          <div class="meta-pill">Raum</div>
+          <div class="meta-pill">Öffentliche Bauten</div>
+          <div class="meta-pill">Nachhaltigkeit</div>
         </div>
 
         <div class="button-row">
@@ -810,7 +859,7 @@
       </div>
 
       <div class="hero-portrait">
-        <img src="stuhlbild.jpg" alt="Porträt von Emma Rauwolf" />
+        <img src="baustelle.jpg" alt="Emma Rauwolf auf der Baustelle" />
       </div>
     </section>
 
@@ -846,35 +895,35 @@
           </div>
         </article>
 
-        <article class="project-card medium">
+        <article class="project-card medium" data-project="modellbau">
+          <img src="ichmodellbau.jpg" alt="Emma Rauwolf beim Modellbau" />
+          <div class="project-overlay">
+            <div class="project-overlay-inner">
+              <div class="project-category">Prozess · Modellbau</div>
+              <div class="project-name">Modellbau</div>
+              <div class="project-caption">Modellbau als zentrales Entwurfswerkzeug – um Raum, Proportion und Atmosphäre greifbar zu machen.</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card small">
           <img src="modell.jpg" alt="Modellbild Architekturprojekt" />
           <div class="project-overlay">
             <div class="project-overlay-inner">
               <div class="project-category">Modell · Entwurfsprozess</div>
               <div class="project-name">Modellstudie</div>
-              <div class="project-caption">Analoge Auseinandersetzung mit Raum, Material und Atmosphäre im Entwurfsprozess.</div>
+              <div class="project-caption">Analoge und digitale Auseinandersetzung mit Raum und Materialität.</div>
             </div>
           </div>
         </article>
 
         <article class="project-card small">
-          <img src="ichmodellbau.jpg" alt="Emma Rauwolf beim Modellbau" />
+          <img src="stuhlbild.jpg" alt="Emma Rauwolf Porträt" />
           <div class="project-overlay">
             <div class="project-overlay-inner">
-              <div class="project-category">Prozess · Atelier</div>
-              <div class="project-name">Modellbau</div>
-              <div class="project-caption">Zwischen Idee und Raum entsteht Architektur im Maßstab.</div>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card small">
-          <img src="baustelle.jpg" alt="Emma Rauwolf auf der Baustelle" />
-          <div class="project-overlay">
-            <div class="project-overlay-inner">
-              <div class="project-category">Praxis · Baustelle</div>
-              <div class="project-name">Baustellenblick</div>
-              <div class="project-caption">Architektur im realen Kontext – mit Blick für Konstruktion, Atmosphäre und Umsetzung.</div>
+              <div class="project-category">Profil · Persönlichkeit</div>
+              <div class="project-name">Emma Rauwolf</div>
+              <div class="project-caption">Zwischen Entwurf, Haltung und Freude am Gestalten.</div>
             </div>
           </div>
         </article>
@@ -886,21 +935,77 @@
       <h2>Über mich</h2>
 
       <div class="about-grid">
-        <div class="about-card">
-          <h3>Emma Rauwolf</h3>
-          <p>
-            Ich studiere Architektur und entwickle Entwürfe mit Fokus auf Atmosphäre, räumliche Klarheit und menschliches Erleben. Mich interessieren Konzepte, die funktional präzise sind und zugleich emotional wirken – ruhig, hochwertig und mit einer klaren gestalterischen Haltung.
-          </p>
-
-          <div class="about-list">
-            <div class="about-item">Architekturstudentin mit Fokus auf Entwurf, Konzept und Raumwirkung</div>
-            <div class="about-item">Interesse an Wohnbau, öffentlichen Gebäuden, Interior und nachhaltigen Ansätzen</div>
-            <div class="about-item">Arbeitsweise: konzeptionell, bildstark, materialbewusst und atmosphärisch</div>
-          </div>
+        <div class="about-image-card">
+          <img src="stuhlbild.jpg" alt="Emma Rauwolf auf dem Stuhl" />
         </div>
 
-        <div class="about-card about-image-card">
-          <img src="baustelle.jpg" alt="Emma Rauwolf auf der Baustelle" />
+        <div class="about-content">
+          <div class="profile-summary" id="profileSummary" role="button" tabindex="0" aria-expanded="false" aria-controls="profileDetail">
+            <h3>Steckbrief</h3>
+
+            <div class="profile-grid">
+              <div class="profile-item">
+                <div class="profile-icon">👤</div>
+                <div>
+                  <div class="profile-label">Name</div>
+                  <div class="profile-value">Emma Rauwolf</div>
+                </div>
+              </div>
+
+              <div class="profile-item">
+                <div class="profile-icon">🎓</div>
+                <div>
+                  <div class="profile-label">Studium</div>
+                  <div class="profile-value">Architektur, TH Rosenheim</div>
+                </div>
+              </div>
+
+              <div class="profile-item">
+                <div class="profile-icon">📚</div>
+                <div>
+                  <div class="profile-label">Semester</div>
+                  <div class="profile-value">6. Semester von 8</div>
+                </div>
+              </div>
+
+              <div class="profile-item">
+                <div class="profile-icon">📍</div>
+                <div>
+                  <div class="profile-label">Standort</div>
+                  <div class="profile-value">Augsburg / Rosenheim</div>
+                </div>
+              </div>
+
+              <div class="profile-item">
+                <div class="profile-icon">🏛️</div>
+                <div>
+                  <div class="profile-label">Fokus</div>
+                  <div class="profile-value">Entwurf, Konzept, öffentliche und soziale Gebäude</div>
+                </div>
+              </div>
+
+              <div class="profile-item">
+                <div class="profile-icon">♻️</div>
+                <div>
+                  <div class="profile-label">Haltung</div>
+                  <div class="profile-value">Klarheit, Funktionalität, Nachhaltigkeit</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="profile-tip">Klicken für ausführliches Profil</div>
+          </div>
+
+          <div class="profile-detail" id="profileDetail">
+            <h3>Über mich</h3>
+            <p>Ich bin Emma Rauwolf, 21 Jahre alt, und studiere Architektur an der TH Rosenheim. Derzeit befinde ich mich im 6. Semester meines Bachelorstudiums, das insgesamt auf 8 Semester ausgelegt ist.</p>
+            <p>Mein Zugang zur Architektur ist stark durch praktische Erfahrungen geprägt. Noch vor Studienbeginn habe ich im Rahmen eines viermonatigen Vorpraktikums auf der Baustelle gearbeitet und dabei ein grundlegendes Verständnis für Materialien, Abläufe und die Realität des Bauens entwickelt.</p>
+            <p>Im Anschluss war ich ein Jahr in einem Ingenieurbüro tätig. Dort konnte ich erste Leistungsverzeichnisse erstellen, Baustellen besichtigen und die Planung unterstützen. Diese Zeit hat mir ein gutes Verständnis für die Schnittstelle zwischen Entwurf und technischer Umsetzung vermittelt.</p>
+            <p>Ein besonders prägender Abschnitt war mein Praxissemester bei OTT ARCHITEKTEN in Augsburg. Über sechs Monate hinweg konnte ich dort aktiv an Projekten mitarbeiten und Einblicke in alle Leistungsphasen (LPH 1–8) gewinnen – von den ersten Entwurfsideen bis hin zur Umsetzung auf der Baustelle. Dadurch hat sich mein Verständnis für den gesamten Planungs- und Bauprozess deutlich geschärft.</p>
+            <p>Mein Fokus liegt auf Entwurf und Konzept sowie auf öffentlichen und sozialen Gebäuden. Mich interessiert insbesondere, wie Architektur Räume schaffen kann, die gesellschaftliche Funktionen übernehmen und gleichzeitig eine klare gestalterische Haltung zeigen.</p>
+            <p>Ich arbeite konzeptionell und lege großen Wert auf Klarheit, Funktionalität und eine präzise gestalterische Ausarbeitung. Nachhaltigkeit verstehe ich dabei nicht nur als technische Anforderung, sondern als integralen Bestandteil eines ganzheitlichen Entwurfsansatzes.</p>
+            <p>Gleichzeitig ist mir wichtig, Architektur nicht nur als Bild zu denken. Ich möchte Räume schaffen, die nicht perfekt für ein Foto sind, sondern für die Menschen, die sie nutzen. Räume, in denen man sich wohlfühlt, die lebendig sind, in denen gelacht wird und die Freude ermöglichen. Als ein positiver und lebensfroher Mensch ist genau das mein Anspruch an Architektur: Orte zu gestalten, die nicht nur funktionieren, sondern auch glücklich machen.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -956,16 +1061,19 @@
           'Material: Holzkonstruktion',
           'Konzept: Blickbeziehungen · Leichtigkeit · fließende Innen- und Außenräume'
         ],
-        images: [
-          'v01.png',
-          'v02.png',
-          'v03.png',
-          'v04.png',
-          'v05.png',
-          'v06.png',
-          'v07.png',
-          'v08.png'
-        ]
+        images: ['v01.png', 'v02.png', 'v03.png', 'v04.png', 'v05.png', 'v06.png', 'v07.png', 'v08.png']
+      },
+      modellbau: {
+        kicker: 'Prozess · Modellbau',
+        title: 'Modellbau',
+        text: 'Der Modellbau ist für mich ein zentraler Bestandteil des Entwurfsprozesses – nicht nur Darstellung, sondern ein echtes Entwurfswerkzeug. Über die Jahre habe ich eine Vielzahl an Modellen gebaut, in unterschiedlichen Maßstäben und mit verschiedensten Materialien und Techniken.\n\nIch arbeite sowohl digital als auch analog: mit 3D-Druck, Lasercutter und Styrodurschneider ebenso wie ganz klassisch mit Finnpappe, Cutter und Kleber. Je nach Entwurfsphase und Fragestellung wähle ich bewusst die passende Methode, um Raum, Proportion und Atmosphäre greifbar zu machen.\n\nEin Modell ermöglicht es, Architektur unmittelbar zu verstehen. Es zeigt Zusammenhänge, Licht, Tiefe und Wirkung auf eine Weise, die Pläne allein oft nicht leisten können. Für mich kann ein gutes Modell mehr erzählen als viele Zeichnungen – weil es Räume erlebbar macht, noch bevor sie gebaut sind.\n\nModellbau bedeutet für mich, Ideen zu testen, zu hinterfragen und weiterzuentwickeln. Er ist ein essenzieller Teil meines gestalterischen Prozesses und ein Medium, um Architektur nicht nur zu denken, sondern zu begreifen.',
+        facts: [
+          'Werkzeuge: 3D-Druck · Lasercutter · Styrodurschneider',
+          'Analog: Finnpappe · Cutter · Kleber',
+          'Fokus: Raum · Proportion · Atmosphäre',
+          'Rolle: Entwurfswerkzeug und Darstellung'
+        ],
+        images: ['ichmodellbau.jpg', 'modell.jpg']
       }
     };
 
@@ -976,6 +1084,8 @@
     const modalText = document.getElementById('modalText');
     const modalFacts = document.getElementById('modalFacts');
     const closeButton = document.querySelector('.modal-close');
+    const profileSummary = document.getElementById('profileSummary');
+    const profileDetail = document.getElementById('profileDetail');
 
     document.querySelectorAll('.project-card[data-project]').forEach(card => {
       card.addEventListener('click', () => openProject(card.dataset.project));
@@ -1007,6 +1117,12 @@
       document.body.style.overflow = '';
     }
 
+    function toggleProfileDetail() {
+      const isOpen = profileDetail.classList.contains('open');
+      profileDetail.classList.toggle('open');
+      profileSummary.setAttribute('aria-expanded', String(!isOpen));
+    }
+
     closeButton.addEventListener('click', closeProject);
 
     modal.addEventListener('click', event => {
@@ -1015,7 +1131,13 @@
 
     document.addEventListener('keydown', event => {
       if (event.key === 'Escape') closeProject();
+      if ((event.key === 'Enter' || event.key === ' ') && document.activeElement === profileSummary) {
+        event.preventDefault();
+        toggleProfileDetail();
+      }
     });
+
+    profileSummary.addEventListener('click', toggleProfileDetail);
 
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
