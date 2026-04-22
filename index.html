@@ -6,7 +6,6 @@
   <title>Emma Rauwolf Architektur</title>
   <meta name="description" content="Architektur mit Atmosphäre, Klarheit und Freude am Entwurf – Portfolio von Emma Rauwolf Architektur." />
 
-  <!-- Social Preview -->
   <meta property="og:title" content="Emma Rauwolf Architektur" />
   <meta property="og:description" content="Architektur mit Atmosphäre, Klarheit und Freude am Entwurf." />
   <meta property="og:image" content="logorundrosa.png" />
@@ -28,11 +27,12 @@
       --radius-lg: 24px;
       --radius-md: 16px;
       --max: 1380px;
-      --nav-height: 92px;
+      --nav-height: 120px;
     }
 
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
       font-family: "Helvetica Neue", Arial, sans-serif;
@@ -58,15 +58,15 @@
       top: 0;
       z-index: 50;
       backdrop-filter: blur(14px);
-      background: rgba(248, 238, 239, 0.72);
-      border-bottom: 1px solid rgba(230, 207, 211, 0.8);
+      background: rgba(248, 238, 239, 0.86);
+      border-bottom: 1px solid rgba(230, 207, 211, 0.9);
     }
 
     .header-inner {
-      max-width: var(--max);
+      max-width: 100%;
       margin: 0 auto;
       min-height: var(--nav-height);
-      padding: 18px 24px;
+      padding: 24px 42px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -76,29 +76,19 @@
     .brand {
       display: flex;
       align-items: center;
-      gap: 16px;
       min-width: 0;
     }
 
     .brand img {
-      height: 42px;
+      height: 48px;
       width: auto;
-      flex-shrink: 0;
-    }
-
-    .brand-name {
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 0.28em;
-      font-size: 12px;
-      line-height: 1.45;
-      white-space: nowrap;
+      display: block;
     }
 
     .nav {
       display: flex;
       align-items: center;
-      gap: 26px;
+      gap: 46px;
       flex-wrap: wrap;
       justify-content: flex-end;
     }
@@ -106,15 +96,19 @@
     .nav a {
       color: var(--accent);
       text-transform: uppercase;
-      letter-spacing: 0.16em;
-      font-size: 12px;
-      opacity: 0.92;
+      letter-spacing: 0.2em;
+      font-size: 13px;
+      opacity: 0.96;
       transition: opacity 0.2s ease, transform 0.2s ease;
     }
 
-    .nav a:hover { opacity: 0.62; transform: translateY(-1px); }
+    .nav a:hover {
+      opacity: 0.62;
+      transform: translateY(-1px);
+    }
 
     .section { margin-top: 110px; }
+
     .section-label {
       display: inline-block;
       margin-bottom: 14px;
@@ -123,6 +117,7 @@
       letter-spacing: 0.26em;
       font-size: 12px;
     }
+
     .section h2 {
       margin: 0 0 28px;
       font-family: Georgia, "Times New Roman", serif;
@@ -138,7 +133,7 @@
       grid-template-columns: 1.02fr 0.98fr;
       align-items: stretch;
       gap: 28px;
-      padding-top: 28px;
+      padding-top: 38px;
     }
 
     .hero-card,
@@ -239,12 +234,14 @@
     }
 
     .btn:hover { transform: translateY(-1px); opacity: 0.96; }
+
     .btn-primary {
       background: var(--accent);
       color: #fff;
       border: 1px solid var(--accent);
       box-shadow: 0 14px 28px rgba(165, 31, 40, 0.16);
     }
+
     .btn-secondary {
       background: transparent;
       color: var(--accent);
@@ -362,8 +359,9 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: center;
       transition: transform 0.9s ease;
-      filter: saturate(0.9) contrast(1.01);
+      filter: saturate(0.92) contrast(1.01);
     }
 
     .project-card:hover img { transform: scale(1.05); }
@@ -421,6 +419,20 @@
     .contact-card {
       background: rgba(255, 249, 250, 0.92);
       padding: 32px 28px;
+    }
+
+    .about-image-card {
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .about-image-card img {
+      width: 100%;
+      height: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      object-position: center;
+      filter: grayscale(100%) contrast(1.04) brightness(1.02);
     }
 
     .about-list {
@@ -534,7 +546,8 @@
       box-shadow: var(--shadow);
       object-fit: cover;
       min-height: 220px;
-      max-height: 440px;
+      max-height: 520px;
+      background: #fff;
     }
 
     .project-modal-meta {
@@ -597,21 +610,27 @@
       .project-card.large,
       .project-card.medium,
       .project-card.small { grid-column: span 12; }
-      .nav { gap: 16px; }
+      .nav { gap: 18px; }
       .header-inner { align-items: flex-start; flex-direction: column; }
     }
 
     @media (max-width: 640px) {
-      :root { --nav-height: 84px; }
+      :root { --nav-height: 94px; }
+
       .container { padding: 0 14px 56px; }
       .header-inner { padding: 16px 14px; }
-      .brand-name {
-        font-size: 11px;
-        letter-spacing: 0.14em;
-        white-space: normal;
+      .brand img { height: 38px; }
+
+      .nav {
+        width: 100%;
+        gap: 10px 14px;
       }
-      .nav { width: 100%; gap: 10px 14px; }
-      .nav a { font-size: 11px; letter-spacing: 0.12em; }
+
+      .nav a {
+        font-size: 11px;
+        letter-spacing: 0.12em;
+      }
+
       .hero { gap: 18px; padding-top: 18px; }
       .hero-card { padding: 30px 22px; border-radius: 24px; }
       .hero-eyebrow { font-size: 10px; padding: 8px 14px; margin-bottom: 18px; }
@@ -629,6 +648,7 @@
       .about-card,
       .contact-card,
       .project-modal-panel { padding: 22px 18px; border-radius: 22px; }
+      .about-image-card { padding: 0; }
       .philosophy-card h3,
       .quote-panel h3,
       .about-card h3,
@@ -653,8 +673,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a href="#top" class="brand" aria-label="Emma Rauwolf Architektur Startseite">
-        <div class="brand-mark" aria-hidden="true"><span>E R</span></div>
-        <div class="brand-name">Emma Rauwolf<br />Architektur</div>
+        <img src="logotransparent.png" alt="Emma Rauwolf Architektur Logo" />
       </a>
 
       <nav class="nav">
@@ -672,7 +691,7 @@
         <div class="hero-eyebrow">Emma Rauwolf Architektur</div>
         <h1 class="hero-title">„Ich möchte, dass die Menschen, die meine zukünftigen Gebäude betreten, das gleiche Lächeln und die gleiche Freude spüren, die ich beim Entwerfen empfinde.“</h1>
         <p class="hero-text">
-          Eine moderne, minimalistische und gleichzeitig emotionale Architekturmarke – mit Fokus auf Atmosphäre, Klarheit und starke räumliche Wirkung.
+          Architektur zwischen Atmosphäre, Klarheit und emotionaler Raumwirkung – mit dem Anspruch, Orte zu entwerfen, die berühren und in Erinnerung bleiben.
         </p>
 
         <div class="hero-meta">
@@ -697,13 +716,14 @@
       <div class="philosophy-card">
         <h3>Architektur mit Haltung</h3>
         <p>
-          Die bestehende Gestaltung deiner Website bleibt bewusst erhalten: weiche Rosé-Töne, viel Weißraum, ruhige Typografie und ein klarer, hochwertiger Gesamtauftritt. Inhaltlich wird sie jedoch stärker in Richtung eines internationalen Architekturportfolios geschärft – bildorientiert, reduziert und emotional.
+          Meine Entwürfe entstehen aus dem Wunsch, Räume zu schaffen, die nicht nur funktionieren, sondern auch emotional wirken. Mich interessieren Atmosphäre, Materialität und klare räumliche Konzepte, die sich sensibel in ihren Kontext einfügen.
         </p>
       </div>
+
       <div class="quote-panel">
         <h3>Markenwirkung</h3>
         <p class="quote-text">
-          Die Website soll nicht wie ein Studentenportfolio wirken, sondern wie das digitale Zuhause eines jungen, klar positionierten Architekturbüros – ruhig, präzise und professionell.
+          Emma Rauwolf Architektur steht für eine ruhige, präzise und hochwertige Formensprache – zwischen architektonischer Klarheit und menschlicher Nähe.
         </p>
       </div>
     </section>
@@ -714,67 +734,45 @@
 
       <div class="projects-grid">
         <article class="project-card large" data-project="vogelbeobachtungsstation">
-          <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1400&q=80" alt="Vogelbeobachtungsstation" />
+          <img src="v01.png" alt="Vogelbeobachtungsstation" />
           <div class="project-overlay">
             <div class="project-overlay-inner">
-              <div class="project-category">Naturraum · Rückzug</div>
+              <div class="project-category">Projekt 01 · Beobachtungsstation am See</div>
               <div class="project-name">Vogelbeobachtungsstation</div>
-              <div class="project-caption">Ein Entwurf zwischen Landschaft, Beobachtung und stiller räumlicher Präsenz.</div>
+              <div class="project-caption">Ein ruhiger Ort zwischen Schilf, Wasserkante und Himmel – geprägt von klarer Holzstruktur und fließenden Übergängen zwischen Innen- und Außenraum.</div>
             </div>
           </div>
         </article>
 
-        <article class="project-card medium" data-project="eventpavillon">
-          <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1200&q=80" alt="Eventpavillon" />
+        <article class="project-card medium">
+          <img src="modell.jpg" alt="Modellbild Architekturprojekt" />
           <div class="project-overlay">
             <div class="project-overlay-inner">
-              <div class="project-category">Temporäre Architektur</div>
-              <div class="project-name">Eventpavillon</div>
-              <div class="project-caption">Leicht, offen und atmosphärisch – ein Ort für Begegnung und Inszenierung.</div>
+              <div class="project-category">Modell · Entwurfsprozess</div>
+              <div class="project-name">Modellstudie</div>
+              <div class="project-caption">Analoge Auseinandersetzung mit Raum, Material und Atmosphäre im Entwurfsprozess.</div>
             </div>
           </div>
         </article>
 
-        <article class="project-card small" data-project="gruenes-forum">
-          <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1000&q=80" alt="Grünes Forum" />
+        <article class="project-card small">
+          <img src="ichmodellbau.jpg" alt="Emma Rauwolf beim Modellbau" />
           <div class="project-overlay">
             <div class="project-overlay-inner">
-              <div class="project-category">Öffentlicher Raum</div>
-              <div class="project-name">Grünes Forum</div>
-              <div class="project-caption">Stadt, Freiraum und Gemeinschaft in einer klaren räumlichen Geste.</div>
+              <div class="project-category">Prozess · Atelier</div>
+              <div class="project-name">Modellbau</div>
+              <div class="project-caption">Zwischen Idee und Raum entsteht Architektur im Maßstab.</div>
             </div>
           </div>
         </article>
 
-        <article class="project-card small" data-project="haus-der-demokratie">
-          <img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=1000&q=80" alt="Haus der Demokratie" />
+        <article class="project-card small">
+          <img src="baustelle.jpg" alt="Emma Rauwolf auf der Baustelle" />
           <div class="project-overlay">
             <div class="project-overlay-inner">
-              <div class="project-category">Öffentliches Gebäude</div>
-              <div class="project-name">Haus der Demokratie</div>
-              <div class="project-caption">Architektur als Ort für Austausch, Offenheit und gesellschaftliche Teilhabe.</div>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card medium" data-project="ue60-wohnen">
-          <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80" alt="Ü60 Wohnen" />
-          <div class="project-overlay">
-            <div class="project-overlay-inner">
-              <div class="project-category">Wohnen · Gemeinschaft</div>
-              <div class="project-name">Ü60 Wohnen</div>
-              <div class="project-caption">Ein Wohnkonzept, das Rückzug, Begegnung und Alltag in Balance bringt.</div>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card large" data-project="schwimmbadumnutzung">
-          <img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=1400&q=80" alt="Schwimmbadumnutzung" />
-          <div class="project-overlay">
-            <div class="project-overlay-inner">
-              <div class="project-category">Bestand · Transformation</div>
-              <div class="project-name">Schwimmbadumnutzung</div>
-              <div class="project-caption">Vom Bestand zur neuen Identität – eine Umnutzung mit räumlicher Tiefe und Respekt für das Vorhandene.</div>
+              <div class="project-category">Praxis · Baustelle</div>
+              <div class="project-name">Baustellenblick</div>
+              <div class="project-caption">Architektur im realen Kontext – mit Blick für Konstruktion, Atmosphäre und Umsetzung.</div>
             </div>
           </div>
         </article>
@@ -799,17 +797,8 @@
           </div>
         </div>
 
-        <div class="about-card">
-          <h3>Website-Konzept</h3>
-          <p>
-            Die Seite verbindet dein bestehendes Farbkonzept und deine Markenästhetik mit den Qualitäten internationaler Architektur-Websites: bildstarke Projektflächen, klare Typografie, ruhige Mikroanimationen, großflächige Weißräume und eine immersive Projektpräsentation mit Modal oder eigener Projektseite.
-          </p>
-
-          <div class="about-list">
-            <div class="about-item">Hero mit Vollbild-Porträt und starkem Leitspruch</div>
-            <div class="about-item">Grid-basierte Projektübersicht mit Hover-Effekten</div>
-            <div class="about-item">Responsive, schnell, minimalistisch und markenstark</div>
-          </div>
+        <div class="about-card about-image-card">
+          <img src="baustelle.jpg" alt="Emma Rauwolf auf der Baustelle" />
         </div>
       </div>
     </section>
@@ -855,94 +844,25 @@
 
   <script>
     const projectData = {
-      'vogelbeobachtungsstation': {
-        kicker: 'Naturraum · Beobachtung',
+      vogelbeobachtungsstation: {
+        kicker: 'Projekt 01 · Beobachtungsstation am See',
         title: 'Vogelbeobachtungsstation',
-        text: 'Der Entwurf untersucht das Verhältnis von Landschaft, Blick und Rückzug. Die Architektur versteht sich als stilles Element im Naturraum und schafft eine präzise Atmosphäre zwischen Schutz, Offenheit und Beobachtung.',
+        text: 'Zwischen Schilf und Wasserkante entsteht ein ruhiger Ort für die Beobachtung der Vogelwelt. Die aufgeständerte Holzkonstruktion hebt sich leicht über das Gelände und ermöglicht neue Blickbeziehungen in Landschaft und Himmel.\n\nInnen- und Außenräume gehen fließend ineinander über – geschützte Zonen stehen offenen Plattformen gegenüber. Die klare Holzstruktur prägt nicht nur die Konstruktion, sondern auch die räumliche Atmosphäre.',
         facts: [
-          'Ort: ergänzen',
-          'Jahr: ergänzen',
+          'Ort: Am See',
           'Typ: Beobachtungsstation',
-          'Konzept: Blickführung · Materialität · Einbindung in die Landschaft'
+          'Material: Holzkonstruktion',
+          'Konzept: Blickbeziehungen · Leichtigkeit · fließende Innen- und Außenräume'
         ],
         images: [
-          'https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1400&q=80',
-          'https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=1400&q=80'
-        ]
-      },
-      'eventpavillon': {
-        kicker: 'Temporäre Architektur',
-        title: 'Eventpavillon',
-        text: 'Ein offener, leichter Baukörper für temporäre Veranstaltungen und Begegnung. Im Mittelpunkt stehen Flexibilität, räumliche Inszenierung und ein klarer architektonischer Ausdruck.',
-        facts: [
-          'Ort: ergänzen',
-          'Jahr: ergänzen',
-          'Typ: Pavillon',
-          'Konzept: Offenheit · Leichtigkeit · gemeinschaftliche Nutzung'
-        ],
-        images: [
-          'https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=1400&q=80',
-          'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80'
-        ]
-      },
-      'gruenes-forum': {
-        kicker: 'Öffentlicher Raum',
-        title: 'Grünes Forum',
-        text: 'Das Projekt verbindet Freiraum, Gemeinschaft und stadträumliche Qualität. Entstanden ist ein Ort, der Nutzung, Aufenthalt und landschaftliche Atmosphäre in einer klaren Geste vereint.',
-        facts: [
-          'Ort: ergänzen',
-          'Jahr: ergänzen',
-          'Typ: Forum / Freiraum',
-          'Konzept: Öffentlichkeit · Landschaft · soziale Interaktion'
-        ],
-        images: [
-          'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80',
-          'https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1400&q=80'
-        ]
-      },
-      'haus-der-demokratie': {
-        kicker: 'Öffentliches Gebäude',
-        title: 'Haus der Demokratie',
-        text: 'Architektur als räumliche Übersetzung von Offenheit, Dialog und Teilhabe. Der Entwurf schafft klare Bewegungsräume und eine starke öffentliche Identität.',
-        facts: [
-          'Ort: ergänzen',
-          'Jahr: ergänzen',
-          'Typ: Öffentliches Gebäude',
-          'Konzept: Transparenz · Gemeinschaft · Klarheit'
-        ],
-        images: [
-          'https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=1400&q=80',
-          'https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=1400&q=80'
-        ]
-      },
-      'ue60-wohnen': {
-        kicker: 'Wohnen · Gemeinschaft',
-        title: 'Ü60 Wohnen',
-        text: 'Ein Wohnkonzept, das Eigenständigkeit, Gemeinschaft und Alltagsqualität miteinander verbindet. Der Fokus liegt auf Atmosphäre, Orientierung und einer warmen räumlichen Identität.',
-        facts: [
-          'Ort: ergänzen',
-          'Jahr: ergänzen',
-          'Typ: Wohnen',
-          'Konzept: Gemeinschaft · Barrierearmut · Geborgenheit'
-        ],
-        images: [
-          'https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1400&q=80',
-          'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80'
-        ]
-      },
-      'schwimmbadumnutzung': {
-        kicker: 'Bestand · Transformation',
-        title: 'Schwimmbadumnutzung',
-        text: 'Die Umnutzung interpretiert den Bestand neu und entwickelt daraus eine eigenständige architektonische Identität. Das Projekt zeigt, wie vorhandene Strukturen atmosphärisch und funktional transformiert werden können.',
-        facts: [
-          'Ort: ergänzen',
-          'Jahr: ergänzen',
-          'Typ: Umnutzung / Bestand',
-          'Konzept: Transformation · Erinnerung · neue Nutzungsschichten'
-        ],
-        images: [
-          'https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=1400&q=80',
-          'https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1400&q=80'
+          'v01.png',
+          'v02.png',
+          'v03.png',
+          'v04.png',
+          'v05.png',
+          'v06.png',
+          'v07.png',
+          'v08.png'
         ]
       }
     };
@@ -955,7 +875,7 @@
     const modalFacts = document.getElementById('modalFacts');
     const closeButton = document.querySelector('.modal-close');
 
-    document.querySelectorAll('.project-card').forEach(card => {
+    document.querySelectorAll('.project-card[data-project]').forEach(card => {
       card.addEventListener('click', () => openProject(card.dataset.project));
     });
 
@@ -964,11 +884,12 @@
       if (!project) return;
 
       modalGallery.innerHTML = project.images
-        .map(src => `<img src="${src}" alt="${project.title}" />`)
+        .map(src => `<img src="${src}" alt="${project.title}" loading="lazy" />`)
         .join('');
+
       modalKicker.textContent = project.kicker;
       modalTitle.textContent = project.title;
-      modalText.textContent = project.text;
+      modalText.innerHTML = project.text.replace(/\n\n/g, '<br><br>');
       modalFacts.innerHTML = project.facts
         .map(fact => `<div class="project-fact">${fact}</div>`)
         .join('');
@@ -985,9 +906,11 @@
     }
 
     closeButton.addEventListener('click', closeProject);
+
     modal.addEventListener('click', event => {
       if (event.target === modal) closeProject();
     });
+
     document.addEventListener('keydown', event => {
       if (event.key === 'Escape') closeProject();
     });
