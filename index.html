@@ -102,7 +102,6 @@
     .nav a:hover { opacity: 0.62; transform: translateY(-1px); }
 
     .section { margin-top: 86px; }
-    .section:first-of-type { margin-top: 26px; }
 
     .section-label {
       display: inline-block;
@@ -120,6 +119,10 @@
       line-height: 1.05;
       font-weight: 600;
       color: var(--accent);
+    }
+
+    .featured-project {
+      margin-top: 26px;
     }
 
     .hero {
@@ -768,7 +771,7 @@
         margin-top: 54px;
       }
 
-      .section:first-of-type {
+      .featured-project {
         margin-top: 18px;
       }
 
@@ -843,10 +846,7 @@
   </header>
 
   <main class="container" id="top">
-    <section class="section" id="projekte" data-reveal>
-      <div class="section-label">Portfolio</div>
-      <h2>Ausgewählte Projekte</h2>
-
+    <section class="featured-project" data-reveal>
       <div class="projects-grid">
         <article class="project-card large" data-project="ue60-wohnen">
           <img src="u01.png" alt="Ü60 Wohnen, Rosenheim-Pang" />
@@ -858,7 +858,56 @@
             </div>
           </div>
         </article>
+      </div>
+    </section>
 
+    <section class="hero">
+      <div class="hero-card">
+        <div class="hero-eyebrow">Emma Rauwolf Architektur</div>
+        <h1 class="hero-title">„Ich möchte, dass die Menschen, die meine zukünftigen Gebäude betreten, das gleiche Lächeln und die gleiche Freude spüren, die ich beim Entwerfen empfinde.“</h1>
+        <p class="hero-text">
+          Architektur zwischen Atmosphäre, Klarheit und emotionaler Raumwirkung – mit dem Anspruch, Orte zu entwerfen, die berühren und in Erinnerung bleiben.
+        </p>
+
+        <div class="hero-meta">
+          <div class="meta-pill">Entwurf</div>
+          <div class="meta-pill">Konzept</div>
+          <div class="meta-pill">Öffentliche Bauten</div>
+          <div class="meta-pill">Nachhaltigkeit</div>
+        </div>
+
+        <div class="button-row">
+          <a class="btn btn-primary" href="#projekte">Weitere Projekte ansehen</a>
+          <a class="btn btn-secondary" href="#about">Über mich</a>
+        </div>
+      </div>
+
+      <div class="hero-portrait">
+        <img src="baustelle.jpg" alt="Emma Rauwolf auf der Baustelle" />
+      </div>
+    </section>
+
+    <section class="intro-grid" data-reveal>
+      <div class="philosophy-card">
+        <h3>Architektur mit Haltung</h3>
+        <p>
+          Meine Entwürfe entstehen aus dem Wunsch, Räume zu schaffen, die nicht nur funktionieren, sondern auch emotional wirken. Mich interessieren Atmosphäre, Materialität und klare räumliche Konzepte, die sich sensibel in ihren Kontext einfügen.
+        </p>
+      </div>
+
+      <div class="quote-panel">
+        <h3>Markenwirkung</h3>
+        <p class="quote-text">
+          Emma Rauwolf Architektur steht für eine ruhige, präzise und hochwertige Formensprache – zwischen architektonischer Klarheit und menschlicher Nähe.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="projekte" data-reveal>
+      <div class="section-label">Portfolio</div>
+      <h2>Weitere Projekte</h2>
+
+      <div class="projects-grid">
         <article class="project-card medium" data-project="schwimmbad-augsburg">
           <img src="s01.png" alt="Projekt Schwimmbad, Augsburg" />
           <div class="project-overlay">
@@ -946,48 +995,6 @@
             </div>
           </div>
         </article>
-      </div>
-    </section>
-
-    <section class="hero">
-      <div class="hero-card">
-        <div class="hero-eyebrow">Emma Rauwolf Architektur</div>
-        <h1 class="hero-title">„Ich möchte, dass die Menschen, die meine zukünftigen Gebäude betreten, das gleiche Lächeln und die gleiche Freude spüren, die ich beim Entwerfen empfinde.“</h1>
-        <p class="hero-text">
-          Architektur zwischen Atmosphäre, Klarheit und emotionaler Raumwirkung – mit dem Anspruch, Orte zu entwerfen, die berühren und in Erinnerung bleiben.
-        </p>
-
-        <div class="hero-meta">
-          <div class="meta-pill">Entwurf</div>
-          <div class="meta-pill">Konzept</div>
-          <div class="meta-pill">Öffentliche Bauten</div>
-          <div class="meta-pill">Nachhaltigkeit</div>
-        </div>
-
-        <div class="button-row">
-          <a class="btn btn-primary" href="#projekte">Projekte ansehen</a>
-          <a class="btn btn-secondary" href="#about">Über mich</a>
-        </div>
-      </div>
-
-      <div class="hero-portrait">
-        <img src="baustelle.jpg" alt="Emma Rauwolf auf der Baustelle" />
-      </div>
-    </section>
-
-    <section class="intro-grid" data-reveal>
-      <div class="philosophy-card">
-        <h3>Architektur mit Haltung</h3>
-        <p>
-          Meine Entwürfe entstehen aus dem Wunsch, Räume zu schaffen, die nicht nur funktionieren, sondern auch emotional wirken. Mich interessieren Atmosphäre, Materialität und klare räumliche Konzepte, die sich sensibel in ihren Kontext einfügen.
-        </p>
-      </div>
-
-      <div class="quote-panel">
-        <h3>Markenwirkung</h3>
-        <p class="quote-text">
-          Emma Rauwolf Architektur steht für eine ruhige, präzise und hochwertige Formensprache – zwischen architektonischer Klarheit und menschlicher Nähe.
-        </p>
       </div>
     </section>
 
